@@ -3,7 +3,8 @@ import styles from "./styles.module.css";
 
 function Signup() {
     const googleAuth = () => {
-        window.open(`${process.env.REACT_APP_BACKEND_URL}/api/v1/oauth/google/callback`, "_self");
+        const REACT_APP_BACKEND_URL = "http://localhost:8080";
+        window.open(`${REACT_APP_BACKEND_URL}/api/v1/oauth/google/callback`, "_self");
     };
     return (
         <div className={styles.container}>
